@@ -1,9 +1,9 @@
-import {
+import type {
   Request,
   Response,
 } from "https://raw.githubusercontent.com/use-seedling/seedling/master/mod.ts";
-import { join } from "https://deno.land/std@0.67.0/path/mod.ts";
-import { parse, parseAll } from "https://deno.land/std@0.67.0/encoding/yaml.ts";
+import { join } from "https://deno.land/std@0.69.0/path/mod.ts";
+import { parse, parseAll } from "https://deno.land/std@0.69.0/encoding/yaml.ts";
 
 interface YAMLFiles {
   file?: string;
