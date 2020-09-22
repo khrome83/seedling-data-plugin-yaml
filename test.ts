@@ -1,23 +1,25 @@
 import {
   assertEquals,
-} from "https://deno.land/std@0.69.0/testing/asserts.ts";
-import { denock } from "https://deno.land/x/denock@0.2.0/mod.ts";
+} from "https://deno.land/std@0.70.0/testing/asserts.ts";
+// import { denock } from "https://deno.land/x/denock@0.2.0/mod.ts";
+// Fixed type issue until https://github.com/SachaCR/denock/issues/7 is merged
+import { denock } from "https://raw.githubusercontent.com/use-seedling/denock/master/mod.ts";
 import yaml from "./mod.ts";
 
 const response = {
-  success: (data: object) => {
+  success: (data: Record<string, unknown>) => {
     return data;
   },
-  skip: (data: object) => {
+  skip: (data: Record<string, unknown>) => {
     return data;
   },
-  error: (data: object) => {
+  error: (data: Record<string, unknown>) => {
     return data;
   },
-  end: (data: object) => {
+  end: (data: Record<string, unknown>) => {
     return data;
   },
-  retry: (data: object) => {
+  retry: (data: Record<string, unknown>) => {
     return data;
   },
 };
