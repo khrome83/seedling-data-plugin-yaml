@@ -7,7 +7,7 @@ A data plugin to read and parse YAML data.
 1. Create a new file in `/data` with the name `yaml.ts`.
 
 ```ts
-import json from "https://deno.land/x/seedling_data_plugin_yaml@0.0.1/mod.ts";
+import yaml from "https://deno.land/x/seedling_data_plugin_yaml@0.0.1/mod.ts";
 export default yaml;
 ```
 
